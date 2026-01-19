@@ -55,30 +55,30 @@
 
 // CMD ["npm", "start"]
 // # Scripts de calidad en package.json
-{
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "lint:fix": "next lint --fix",
-    "test": "jest",
-    "test:coverage": "jest --coverage --watchAll=false",
-    "test:e2e": "cypress run",
-    "quality": "npm run lint && npm run test:coverage && npm run build"
-  }
-}
-Requerimientos:
-# Instalar herramientas básicas de DevOps
-npm install --save-dev husky lint-staged
+// {
+//   "scripts": {
+//     "dev": "next dev",
+//     "build": "next build",
+//     "start": "next start",
+//     "lint": "next lint",
+//     "lint:fix": "next lint --fix",
+//     "test": "jest",
+//     "test:coverage": "jest --coverage --watchAll=false",
+//     "test:e2e": "cypress run",
+//     "quality": "npm run lint && npm run test:coverage && npm run build"
+//   }
+// }
+// Requerimientos:
+// # Instalar herramientas básicas de DevOps
+// npm install --save-dev husky lint-staged
 
-# Inicializar Husky
-npx husky init
+// # Inicializar Husky
+// npx husky init
 
-# Configurar pre-commit hooks
-echo '#!/bin/sh
-. "$(dirname)"_husky.sh"
+// # Configurar pre-commit hooks
+// echo '#!/bin/sh
+// . "$(dirname)"_husky.sh"
 
-npm run quality' > .husky/pre-commit
+// npm run quality' > .husky/pre-commit
 
-chmod +x .husky/pre-commit
+// chmod +x .husky/pre-commit
